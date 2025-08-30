@@ -20,6 +20,7 @@ fi
 mkdir -p "$VOL/models" "$VOL/workflows" "$VOL/output" "$VOL/hf-cache"
 mkdir -p /workspace/models /workspace/workflows /workspace/output
 
+# Symlink data directories from volume (but leave /workspace intact)
 ln -sfn "$VOL/models"     /workspace/models
 ln -sfn "$VOL/workflows"  /workspace/workflows
 ln -sfn "$VOL/output"     /workspace/output
